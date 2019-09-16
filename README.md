@@ -1,101 +1,64 @@
-<p align="center">
-  <img alt="Eightshift WordPress Boilerplate Internal Creative" src="packages/create-wp-theme/logo.svg"/>
-</p>
+# Eightshift Starter Task
+Your assignment will be to build your WordPress theme through a series of different tasks. It is designed to introduce you to Eightshift's way of working with WordPress projects.
 
-[![Travis](https://img.shields.io/travis/infinum/eighshift-task-internal.svg?style=for-the-badge)](https://github.com/infinum/eighshift-task-internal)
-[![npm version](https://img.shields.io/npm/v/create-wp-theme.svg?style=for-the-badge)](https://www.npmjs.com/package/create-wp-theme)
-[![GitHub tag](https://img.shields.io/github/tag/infinum/eighshift-task-internal.svg?style=for-the-badge)](https://github.com/infinum/eighshift-task-internal)
-[![GitHub stars](https://img.shields.io/github/stars/infinum/eighshift-task-internal.svg?style=for-the-badge&label=Stars)](https://github.com/infinum/eighshift-task-internal/)
-[![license](https://img.shields.io/github/license/infinum/eighshift-task-internal.svg?style=for-the-badge)](https://github.com/infinum/eighshift-task-internal)
+Before you start working on this assignment, you should read these materials:
+1. [WordPress Handbook](https://handbook.infinum.co/books/wordpress)
+2. [Frontend Handbook](https://handbook.infinum.co/books/frontend)
 
-# Eightshift WordPress Boilerplate Internal
+Also, you will be working with these libs and should also read their Readme and Wiki materials:
+1. [Eightshift Boilerplate Internal](https://github.com/infinum/eightshift-boilerplate-internal)
+2. [Eightshift Libs](https://github.com/infinum/eightshift-libs)
+3. [Eightshift Blocks](https://github.com/infinum/eightshift-blocks)
+4. [Eightshift Frontend Libs](https://github.com/infinum/eightshift-frontend-libs)
 
-This repository contains all the tools you need to start building a modern WordPress project, using all the latest front end development tools.
+Now that you have all this knowledge in your head, this task should be relatively easy to complete. Good luck and feel free to ask you mentor if anything is not clear.
 
-Eightshift team uses this setup for all WordPress projects. It is similar to [Eightshift Boilerplate](https://github.com/infinum/wp-boilerplate) but with a lot more features.
+## Helpful references:
 
-Eightshift WordPress Boilerplate is maintained and sponsored by
-[Eightshift](https://eightshift.com) and [Infinum](https://infinum.co).
+* [WordPress documentation](https://developer.wordpress.org/)
+* [Gutenberg documentation](https://developer.wordpress.org/block-editor/)
+* [MDN](https://developer.mozilla.org/en-US/)
+* [Can I Use](https://caniuse.com/)
 
-## :books: Table of contents
-- [:mortar_board: Documentation](#mortar_board-documentation)
-- [:tada: Awesome features](#tada-awesome-features)
-- [:school_satchel: Requirements](#school_satchel-requirements)
-- [:rocket: Quick start](#rocket-quick-start)
-- [:interrobang: Plugin](#interrobang-plugin)
-- [:mailbox: Who do I talk to?](#mailbox-who-do-i-talk-to)
-- [:scroll: License](#scroll-license)
+## Pro tips
+* Commit often.
+* Write good commit messages.
+* Read documentation and wiki before you start.
+* Ask your mentor if you are stuck, don't waste an entire day.
+* Documenting your code is important
+* Lint all your code.
 
-## :mortar_board: Documentation
-For all documentation details please refere to [Wiki](https://github.com/infinum/eighshift-task-internal/wiki)
 
-## :tada: Awesome features
+# Instructions
+Everything needs to work in all major modern browsers and the latest mobile devices. You do not need to make them backward compatible with older IE browsers.
 
-Here's why you should use Eightshift Boilerplate Internal for your next project.
+# 1. Setup your local development environment
+This task is reasonably self-explanatory. To work with WordPress, you need to have some development environment on your computer (LAMP or LEMP stack).
 
-- **OOP** - All code is written following the latest object-oriented programming paradigms
-- **[Webpack](https://webpack.js.org/)** - Modern bundling & build process
-- **[SASS (scss)](https://sass-lang.com/)** - Easy to learn CSS on steroids
-- **[Autoprefixing](https://autoprefixer.github.io/)** - Automatically adds vendors prefixes to your CSS
-- **[JS Compiler (Babel)](https://babeljs.io/)** - Write JS using the latest features and let webpack worry about making it work accross all browsers
-- **Minifying** - Automatically minifies your production assets (JS / CSS) during build process
-- **Cache busting** - Each time you build assets, we generate a new URL for each asset file. This means you'll never see the old cached version while developing or after pushing your code to production.
-- **[Lazyloading](https://github.com/verlok/lazyload)** - Easily lazyload images / videos / iframes
-- **[Synchronised browser testing](https://www.browsersync.io/)**
-- **Helps you write better code (automatic code linting)**
-  - [phpcs](https://github.com/squizlabs/PHP_CodeSniffer)
-  - [eslint](https://eslint.org/)
-  - [stylelint](https://stylelint.io/)
-- **[Easy font management](https://github.com/jonathantneal/postcss-font-magician)**
-- **[Easy SASS media queries](https://github.com/infinum/media-blender)**
-2. **[Eightshift Libs](https://github.com/infinum/eightshift-libs)** - Library aimed at bringing the modern development tools to your project.
-3. **[Eightshift Blocks](https://github.com/infinum/eightshift-blocks)** - This repository contains all the tools you need to start building a modern Gutenberg dynamic blocks.
-4. **[Eightshift Frontend Libs](https://github.com/infinum/eightshift-frontend-libs)** - A collection of useful frontend utility modules.
+We suggest working on VVV setup, as it comes with a lot of preinstalled tools you can use, but this is not mandatory. Use the environment that you feel most comfortable working on.
 
-## :school_satchel: Requirements
+Details on different environments can be found in [WordPress Handbook](https://handbook.infinum.co/books/wordpress/Development%20environment/Setting%20up%20development%20environment)
 
-1. [Node.js](https://nodejs.org/en/)
-2. [Composer](https://getcomposer.org/)
+# 2. Setup
+Follow the instructions in [internal Eightshift Boilerplate](https://github.com/infinum/eightshift-boilerplate-internal) and set up your project.
 
-## :rocket: Quick start 
+# 3. Implement the provided design
+Design and all assets for your assignment are in this [folder](https://github.com/infinum/eightshift-starter-task/tree/master/task). Style them and implement them using Gutenberg dynamic blocks.
 
-Let's create a new project!
+# 4. Lint your code
+Linting is very important for code quality and code consistency. You can't push any changes to Github that are not linted and valid.
 
-Navigate to your WordPress install's root folder and run the following command:
+# 5. QA
+Once you are happy with the project, go to the QA team on the 7th floor and test your project on multiple devices. You can use browser-sync features for this.
 
-```
-npx create-wp-project
-```
+You should test on:
+* Latest Android Device
+* Latest iOS Device
+* Firefox
+* Chrome
+* Windows IE 11
+* Windows Edge
 
-Script will prompt you for theme name and local development url (used for BrowserSync) and install a new theme:
+Alternatively, you can use [https://www.browserstack.com/](https://www.browserstack.com/), you will find the login credentials in 1Pass.
 
-![](packages/create-wp-theme/setup.gif)
-
-After the script is finished, you can activate the theme through WP Admin Dashboard. 
-
-To start developing run this command from projects root folder:
-```
-npm start
-```
-
-## :interrobang: Plugin
-
-When working for a client it may be easier to add every additional functionality to the theme. Since you are using namespaces, this contains all the necessary logic in the theme. You can use plugins of course, but be careful how you are adding extra functionality, so that you don't run in the dependency hell.
-If you need to expose certain functionality across the multisite we recommend that you create a plugin.
-
-Plugins should be created using plugin boilerplate, with addition of namespaces and autoloader. We have that also prepared so please check our [Eightshfit Boilerplate Plugin](https://github.com/infinum/eighshift-task-plugin).
-
-## :mailbox: Who do I talk to?
-
-For questions talk to:
-
-* [ivan.ruzevic@infinum.hr](ivan.ruzevic@infinum.hr)
-* [denis.zoljom@infinum.hr](denis.zoljom@infinum.hr)
-* [ivan.grginov@infinum.hr](ivan.grginov@infinum.hr)
-* [team@eightshift.com](team@eightshift.com)
-
-Eightshift WordPress Boilerplate Internal is maintained and sponsored by Eightshift and Infinum.
-
-## :scroll: License
-
-Eightshift WordPress Boilerplate Internal is Copyright ©2019 Infinum. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+ If everything is working correctly, you are ready to work on more significant projects.

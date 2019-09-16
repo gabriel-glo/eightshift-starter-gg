@@ -5,3 +5,8 @@ If you want to override it just define it with new value here.
 All variables are available here:
 https://github.com/infinum/eightshift-frontend-libs/blob/develop/scss/_core.scss
 */
+
+// Default Container Width.
+$base-container-size: 1230px;
+
+$base-container-spacing: 15px !default;

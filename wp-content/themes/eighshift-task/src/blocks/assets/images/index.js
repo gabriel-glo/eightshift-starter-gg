@@ -7,3 +7,7 @@
  */
 
 import './logo.svg';
+import './logo.png';
+import './hamburger.svg';
+import './arrow-right.svg';
+import './arrow-left.svg';

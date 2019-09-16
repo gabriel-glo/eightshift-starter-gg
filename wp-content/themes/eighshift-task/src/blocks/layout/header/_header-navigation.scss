@@ -1,4 +1,4 @@
-.main-navigation {
+.header-navigation {
   @extend %list-reset;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
     padding-right: $base-container-spacing;
 
     &--menu-highlight {
-      .main-navigation__link {
+      .header-navigation__link {
         background-color: $base-primary-color;
         color: $base-white-color;
         padding: 14px 30px;

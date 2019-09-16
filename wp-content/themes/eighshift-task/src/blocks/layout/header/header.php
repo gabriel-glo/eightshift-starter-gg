@@ -24,7 +24,7 @@ $logo_img         = apply_filters( Manifest::MANIFEST_ITEM_FILTER_NAME, 'logo.sv
         <img class="header__logo-img" src="<?php echo esc_url( $logo_img ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
       </a>
 
-      <?php echo esc_html( $main_menu->bem_menu( 'header_main_nav', 'main-navigation' ) ); ?>
+      <?php echo esc_html( $main_menu->bem_menu( 'header_main_nav', 'header-navigation' ) ); ?>
     </div>
   </div>
 </div>

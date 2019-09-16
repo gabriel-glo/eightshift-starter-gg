@@ -1,0 +1,22 @@
+.footer-navigation {
+  @extend %list-reset;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &--menu-highlight {
+      .footer-navigation__link {
+        color: $base-primary-color;
+      }
+    }
+  }
+
+  &__link {
+    color: $base-nobel-color;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}

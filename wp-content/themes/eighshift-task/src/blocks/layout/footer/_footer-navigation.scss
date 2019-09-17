@@ -1,28 +1,30 @@
 $footer-navigation: (
-  footer-nav-spacing: $base-gutter-size,
-  footer-nav-text: $base-nobel-color,
-  footer-nav-highlight-text: $base-primary-color,
+  horizontal-spacing: $base-gutter-size,
+  text: $base-nobel-color,
+  highlight-text: $base-primary-color,
 );
 
 .footer-navigation {
+  $this: &;
+
   @extend %list-reset;
   display: flex;
   align-items: center;
 
   &__item {
-    padding-left: map-get($footer-navigation, 'footer-nav-spacing');
-    padding-right: map-get($footer-navigation, 'footer-nav-spacing');
+    padding-left: map-get-strict($footer-navigation, horizontal-spacing);
+    padding-right: map-get-strict($footer-navigation, horizontal-spacing);
 
     &--menu-highlight {
-      .footer-navigation__link {
-        color: map-get($footer-navigation, 'footer-nav-highlight-text');
+      #{$this}__link {
+        color: map-get-strict($footer-navigation, highlight-text);
       }
     }
   }
 
   &__link {
     display: inline-block;
-    color: map-get($footer-navigation, 'footer-nav-text');
+    color: map-get-strict($footer-navigation, text);
     text-decoration: none;
     font-weight: 600;
   }

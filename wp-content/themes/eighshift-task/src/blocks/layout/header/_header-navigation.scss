@@ -1,25 +1,27 @@
 $header-navigation: (
-  header-nav-spacing: $base-gutter-size,
-  header-nav-negative-spacing: -$base-gutter-size,
-  header-nav-text: $base-text-color,
-  header-nav-highlight-bg: $base-primary-color,
-  header-nav-highlight-text: $base-white-color,
+  horizontal-spacing: $base-gutter-size,
+  negative-horizontal-spacing: -$base-gutter-size,
+  text-color: $base-text-color-color,
+  highlight-bg-color: $base-primary-color,
+  highlight-text-color: $base-white-color,
 );
 
 .header-navigation {
+  $this: &;
+
   @extend %list-reset;
   display: flex;
   align-items: center;
-  margin: 0 map-get($header-navigation, 'header-nav-negative-spacing');
+  margin: 0 map-get-strict($header-navigation, negative-horizontal-spacing);
 
   &__item {
-    padding-left: map-get($header-navigation, 'header-nav-spacing');
-    padding-right: map-get($header-navigation, 'header-nav-spacing');
+    padding-left: map-get-strict($header-navigation, horizontal-spacing);
+    padding-right: map-get-strict($header-navigation, horizontal-spacing);
 
     &--menu-highlight {
-      .header-navigation__link {
-        background-color: map-get($header-navigation, 'header-nav-highlight-bg');
-        color: map-get($header-navigation, 'header-nav-highlight-text');
+      #{$this}__link {
+        background-color: map-get-strict($header-navigation, highlight-bg-color);
+        color: map-get-strict($header-navigation, highlight-text-color);
         padding: 14px 30px;
         border-radius: 500px;
       }
@@ -28,7 +30,7 @@ $header-navigation: (
 
   &__link {
     display: inline-block;
-    color: map-get($header-navigation, 'header-nav-text');
+    color: map-get-strict($header-navigation, text-color);
     text-decoration: none;
     font-weight: 600;
   }

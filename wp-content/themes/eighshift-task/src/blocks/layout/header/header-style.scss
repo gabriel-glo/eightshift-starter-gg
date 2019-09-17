@@ -1,18 +1,21 @@
+@import './header-navigation';
+
 $header: (
+  horizontal-spacing: $base-gutter-size,
+  container-size: $base-container-size,
   shadow-color: rgba($base-black-color, 0.2),
-  header-spacing: $base-gutter-size,
 );
 
 .header {
   padding-top: 12px;
   padding-bottom: 12px;
-  box-shadow: 0 2px 5px map-get($header, 'shadow-color');
+  box-shadow: 0 2px 5px map-get-strict($header, shadow-color);
 
   &__container {
     margin: 0 auto;
-    max-width: $base-container-size;
-    padding-left: map-get($header, 'header-spacing');
-    padding-right: map-get($header, 'header-spacing');
+    max-width: map-get-strict($header, container-size);
+    padding-left: map-get-strict($header, horizontal-spacing);
+    padding-right: map-get-strict($header, horizontal-spacing);
   }
 
   &__inner {
@@ -21,14 +24,13 @@ $header: (
   }
 
   &__logo-link {
-    display: inline-block;
+    display: block;
     max-width: 101px;
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+  }
+
+  &__logo-img {
+    display: block;
+    max-width: 100%;
   }
 }
-
-@import './header-navigation';

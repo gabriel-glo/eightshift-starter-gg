@@ -1,3 +1,47 @@
-// .footer {
+@import './footer-navigation';
 
-// }
+$footer: (
+  container-size: $base-container-size,
+  vertial-spacing: 36px,
+  horizontal-spacing: $base-gutter-size,
+  tagline-text-color: $base-nobel-color,
+);
+
+.footer {
+  padding-top: map-get-strict($footer, vertial-spacing);
+  padding-bottom: map-get-strict($footer, vertial-spacing);
+
+  &__container {
+    margin: 0 auto;
+    max-width: map-get-strict($footer, container-size);
+    padding-left: map-get-strict($footer, horizontal-spacing);
+    padding-right: map-get-strict($footer, horizontal-spacing);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-nav-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-link {
+    display: block;
+    width: 85px;
+    padding-right: map-get-strict($footer, horizontal-spacing);
+
+  }
+
+  &__logo-img {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__tag-line {
+    color: map-get-strict($footer, tagline-text-color);
+    font-weight: 600;
+  }
+}

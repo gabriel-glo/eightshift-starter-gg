@@ -5,8 +5,12 @@ $heading: (
   ),
   sizes: (
     mobile: (
+      small: (
+        font-size: 18px,
+        line-height: 1,
+      ),
       default: (
-        font-size: 64px,
+        font-size: 30px,
         line-height: 1,
       ),
       big: (
@@ -15,13 +19,17 @@ $heading: (
       ),
     ),
     tablet: (
+      small: (
+        font-size: 22px,
+        line-height: 1,
+      ),
       default: (
-        font-size: 115px,
-        line-height: 0.9,
+        font-size: 60px,
+        line-height: 1,
       ),
       big: (
         font-size: 90px,
-        line-height: 1,
+        line-height: 1.1,
       ),
     ),
   )

@@ -1,0 +1,30 @@
+$footer-navigation: (
+  horizontal-spacing: $base-gutter-size,
+  text-color: $base-nobel-color,
+  highlight-text-color: $base-primary-color,
+);
+
+.footer-navigation {
+  $this: &;
+
+  @extend %list-reset;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    padding-left: map-get-strict($footer-navigation, horizontal-spacing);
+    padding-right: map-get-strict($footer-navigation, horizontal-spacing);
+
+    &--menu-highlight {
+      #{$this}__link {
+        color: map-get-strict($footer-navigation, highlight-text-color);
+      }
+    }
+  }
+
+  &__link {
+    color: map-get-strict($footer-navigation, text-color);
+    text-decoration: none;
+    font-weight: 600;
+  }
+}

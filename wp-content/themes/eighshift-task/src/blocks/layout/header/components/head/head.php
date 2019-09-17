@@ -5,12 +5,11 @@
  * @package Eighshift_Task\Views\Header\Head
  *
  * @since 1.0.0
- *
  */
 
 use Eighshift_Task\Manifest\Manifest;
 
-$icon = apply_filters( Manifest::MANIFEST_ITEM_FILTER_NAME, 'logo.svg' );
+$icon = apply_filters( Manifest::MANIFEST_ITEM_FILTER_NAME, 'logo.png' );
 ?>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -33,16 +32,16 @@ $icon = apply_filters( Manifest::MANIFEST_ITEM_FILTER_NAME, 'logo.svg' );
 <link rel="dns-prefetch" href="//www.google-analytics.com">
 
 <!-- Mobile chrome -->
-<meta name="theme-color" content="#900000">
+<meta name="theme-color" content="#ff86d6">
 
 <!-- Win phone Meta -->
 <meta name="application-name" content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"/>
-<meta name="msapplication-TileColor" content="#900000"/>
+<meta name="msapplication-TileColor" content="#ff86d6"/>
 
 <!-- Apple -->
 <meta name="apple-mobile-web-app-title" content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#C3151B">
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff86d6">
 <link rel="apple-touch-startup-image" href="<?php echo esc_url( $icon ); ?>">
 
 <!-- General -->

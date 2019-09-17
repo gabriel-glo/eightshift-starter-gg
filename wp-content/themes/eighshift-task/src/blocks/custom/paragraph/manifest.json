@@ -24,6 +24,10 @@
     "styleType": {
       "type": "string",
       "default": "primary"
+    },
+    "styleSize": {
+      "type": "string",
+      "default": "default"
     }
   }
 }

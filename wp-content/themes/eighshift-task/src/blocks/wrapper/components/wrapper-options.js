@@ -206,7 +206,7 @@ export const WrapperOptions = (props) => {
           onChange={onChangeStyleShowOnlyMobile}
         />
       }
-      
+
       <hr />
       <h3>{__('General', 'eighshift-task')}</h3>
       {onChangeId &&

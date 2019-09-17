@@ -17,7 +17,7 @@
     },
     "styleContainerWidth": {
       "type": "string",
-      "default": "medium"
+      "default": "default"
     },
     "styleTextColor": {
       "type": "string",

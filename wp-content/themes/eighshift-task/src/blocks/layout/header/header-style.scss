@@ -1,13 +1,18 @@
+$header: (
+  shadow-color: rgba($base-black-color, 0.2),
+  header-spacing: $base-gutter-size,
+);
+
 .header {
   padding-top: 12px;
   padding-bottom: 12px;
-  box-shadow: 0 2px 5px rgba($base-black-color, 0.2);
+  box-shadow: 0 2px 5px map-get($header, 'shadow-color');
 
   &__container {
     margin: 0 auto;
     max-width: $base-container-size;
-    padding-left: $base-container-spacing;
-    padding-right: $base-container-spacing;
+    padding-left: map-get($header, 'header-spacing');
+    padding-right: map-get($header, 'header-spacing');
   }
 
   &__inner {
@@ -16,7 +21,13 @@
   }
 
   &__logo-link {
+    display: inline-block;
     max-width: 101px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
   }
 }
 

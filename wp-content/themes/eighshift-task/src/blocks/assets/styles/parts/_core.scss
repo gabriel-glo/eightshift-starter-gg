@@ -17,19 +17,3 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-a {
-  color: inherit;
-  transition: none;
-  display: inline-block;
-
-  &:hover {
-    color: inherit;
-  }
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}

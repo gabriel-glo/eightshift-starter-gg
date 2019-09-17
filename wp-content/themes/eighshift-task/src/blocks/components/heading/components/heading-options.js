@@ -29,6 +29,7 @@ export const HeadingOptions = (props) => {
           label={__('Heading Size', 'eighshift-task')}
           value={styleSize}
           options={[
+            { label: __('Small', 'eighshift-task'), value: 'small' },
             { label: __('Default', 'eighshift-task'), value: 'default' },
             { label: __('Big', 'eighshift-task'), value: 'big' },
           ]}

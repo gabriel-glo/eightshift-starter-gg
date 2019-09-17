@@ -1,9 +1,10 @@
 @import './footer-navigation';
 
 $footer: (
+  container-size: $base-container-size,
   vertial-spacing: 36px,
   horizontal-spacing: $base-gutter-size,
-  tagline-text: $base-nobel-color,
+  tagline-text-color: $base-nobel-color,
 );
 
 .footer {
@@ -12,7 +13,7 @@ $footer: (
 
   &__container {
     margin: 0 auto;
-    max-width: $base-container-size;
+    max-width: map-get-strict($footer, container-size);
     padding-left: map-get-strict($footer, horizontal-spacing);
     padding-right: map-get-strict($footer, horizontal-spacing);
   }
@@ -40,7 +41,7 @@ $footer: (
   }
 
   &__tag-line {
-    color: map-get-strict($footer, tagline-text);
+    color: map-get-strict($footer, tagline-text-color);
     font-weight: 600;
   }
 }

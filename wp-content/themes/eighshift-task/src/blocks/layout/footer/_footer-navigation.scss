@@ -1,7 +1,7 @@
 $footer-navigation: (
   horizontal-spacing: $base-gutter-size,
-  text: $base-nobel-color,
-  highlight-text: $base-primary-color,
+  text-color: $base-nobel-color,
+  highlight-text-color: $base-primary-color,
 );
 
 .footer-navigation {
@@ -17,14 +17,13 @@ $footer-navigation: (
 
     &--menu-highlight {
       #{$this}__link {
-        color: map-get-strict($footer-navigation, highlight-text);
+        color: map-get-strict($footer-navigation, highlight-text-color);
       }
     }
   }
 
   &__link {
-    display: inline-block;
-    color: map-get-strict($footer-navigation, text);
+    color: map-get-strict($footer-navigation, text-color);
     text-decoration: none;
     font-weight: 600;
   }

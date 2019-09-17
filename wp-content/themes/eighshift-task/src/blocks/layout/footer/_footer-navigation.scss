@@ -1,5 +1,6 @@
 $footer-navigation: (
   footer-nav-spacing: $base-gutter-size,
+  footer-nav-text: $base-nobel-color,
   footer-nav-highlight-text: $base-primary-color,
 );
 
@@ -20,7 +21,8 @@ $footer-navigation: (
   }
 
   &__link {
-    color: $base-nobel-color;
+    display: inline-block;
+    color: map-get($footer-navigation, 'footer-nav-text');
     text-decoration: none;
     font-weight: 600;
   }

@@ -1,6 +1,7 @@
 $footer: (
   footer-vertial-spacing: 36px,
   footer-horizontal-spacing: $base-gutter-size,
+  footer-tagline-text: $base-nobel-color,
 );
 
 .footer {
@@ -36,7 +37,7 @@ $footer: (
   }
 
   &__tag-line {
-    color: $base-nobel-color;
+    color: map-get($footer, 'footer-tagline-text');
     font-weight: 600;
   }
 }

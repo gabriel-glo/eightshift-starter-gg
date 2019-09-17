@@ -1,16 +1,17 @@
 $footer: (
-  footer-spacing: $base-gutter-size,
+  footer-vertial-spacing: 36px,
+  footer-horizontal-spacing: $base-gutter-size,
 );
 
 .footer {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: map-get($footer, 'footer-vertial-spacing');
+  padding-bottom: map-get($footer, 'footer-vertial-spacing');
 
   &__container {
     margin: 0 auto;
     max-width: $base-container-size;
-    padding-left: map-get($footer, 'footer-spacing');
-    padding-right: map-get($footer, 'footer-spacing');
+    padding-left: map-get($footer, 'footer-horizontal-spacing');
+    padding-right: map-get($footer, 'footer-horizontal-spacing');
   }
 
   &__inner {
@@ -26,7 +27,7 @@ $footer: (
   &__logo-link {
     display: inline-block;
     width: 85px;
-    padding-right: map-get($footer, 'footer-spacing');
+    padding-right: map-get($footer, 'footer-horizontal-spacing');
 
     img {
       display: block;

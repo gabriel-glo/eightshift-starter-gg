@@ -30,12 +30,9 @@ $logo_img         = apply_filters( Manifest::MANIFEST_ITEM_FILTER_NAME, 'logo.sv
 
       <div class="footer__part">
         <p class='footer__tag-line'>
-          <span>
-            <?php echo esc_html( date( 'Y' ) ); ?>
-          </span>
-          <span>
-            <?php echo esc_html( $blog_description ); ?>
-          </span>
+          <span><?php echo esc_html( date( 'Y' ) ); ?></span>
+
+          <span><?php echo esc_html( $blog_description ); ?></span>
         </p>
       </div>
     </div>

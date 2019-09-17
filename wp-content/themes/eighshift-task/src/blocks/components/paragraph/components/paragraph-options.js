@@ -7,6 +7,8 @@ export const ParagraphOptions = (props) => {
     styleColor,
     onChangeStyleColor,
     removeStyle,
+    styleSize,
+    onChangeStyleSize,
   } = props;
 
   return (
@@ -25,9 +27,21 @@ export const ParagraphOptions = (props) => {
               onChange={onChangeStyleColor}
             />
           }
+
+          {styleSize &&
+            <SelectControl
+              label={__('Paragraph Size', 'eighshift-task')}
+              value={styleSize}
+              options={[
+                { label: __('Small', 'eighshift-task'), value: 'small' },
+                { label: __('Default', 'eighshift-task'), value: 'default' },
+                { label: __('Big', 'eighshift-task'), value: 'big' },
+              ]}
+              onChange={onChangeStyleSize}
+            />
+          }
         </PanelBody>
       }
     </Fragment>
   );
 };
-

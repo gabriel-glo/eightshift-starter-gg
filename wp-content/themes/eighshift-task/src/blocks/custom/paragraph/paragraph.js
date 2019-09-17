@@ -15,6 +15,7 @@ export const Paragraph = (props) => {
       content,
       styleAlign,
       styleColor,
+      styleSize,
     },
   } = props;
 
@@ -28,6 +29,8 @@ export const Paragraph = (props) => {
           onChangeStyleAlign={actions.onChangeStyleAlign}
           styleColor={styleColor}
           onChangeStyleColor={actions.onChangeStyleColor}
+          styleSize={styleSize}
+          onChangeStyleSize={actions.onChangeStyleSize}
         />
       </InspectorControls>
       <BlockControls>
@@ -42,6 +45,7 @@ export const Paragraph = (props) => {
         onChangeContent={actions.onChangeContent}
         styleAlign={styleAlign}
         styleColor={styleColor}
+        styleSize={styleSize}
       />
     </Fragment>
   );

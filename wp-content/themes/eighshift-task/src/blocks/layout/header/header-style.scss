@@ -1,3 +1,36 @@
-// .header {
+@import './header-navigation';
 
-// }
+$header: (
+  horizontal-spacing: $base-gutter-size,
+  container-size: $base-container-size,
+  shadow-color: rgba($base-black-color, 0.2),
+);
+
+.header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0 2px 5px map-get-strict($header, shadow-color);
+
+  &__container {
+    margin: 0 auto;
+    max-width: map-get-strict($header, container-size);
+    padding-left: map-get-strict($header, horizontal-spacing);
+    padding-right: map-get-strict($header, horizontal-spacing);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-link {
+    display: block;
+    max-width: 101px;
+
+  }
+
+  &__logo-img {
+    display: block;
+    max-width: 100%;
+  }
+}

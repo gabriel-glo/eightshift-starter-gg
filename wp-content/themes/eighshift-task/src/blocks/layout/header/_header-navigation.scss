@@ -1,0 +1,37 @@
+$header-navigation: (
+  horizontal-spacing: $base-gutter-size,
+  negative-horizontal-spacing: -$base-gutter-size,
+  text-color: $base-text-color-color,
+  highlight-bg-color: $base-primary-color,
+  highlight-text-color: $base-white-color,
+);
+
+.header-navigation {
+  $this: &;
+
+  @extend %list-reset;
+  display: flex;
+  align-items: center;
+  margin: 0 map-get-strict($header-navigation, negative-horizontal-spacing);
+
+  &__item {
+    padding-left: map-get-strict($header-navigation, horizontal-spacing);
+    padding-right: map-get-strict($header-navigation, horizontal-spacing);
+
+    &--menu-highlight {
+      #{$this}__link {
+        background-color: map-get-strict($header-navigation, highlight-bg-color);
+        color: map-get-strict($header-navigation, highlight-text-color);
+        padding: 14px 30px;
+        border-radius: 500px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: map-get-strict($header-navigation, text-color);
+    text-decoration: none;
+    font-weight: 600;
+  }
+}

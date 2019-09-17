@@ -1,15 +1,20 @@
+$footer-navigation: (
+  footer-nav-spacing: $base-gutter-size,
+  footer-nav-highlight-text: $base-primary-color,
+);
+
 .footer-navigation {
   @extend %list-reset;
   display: flex;
   align-items: center;
 
   &__item {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: map-get($footer-navigation, 'footer-nav-spacing');
+    padding-right: map-get($footer-navigation, 'footer-nav-spacing');
 
     &--menu-highlight {
       .footer-navigation__link {
-        color: $base-primary-color;
+        color: map-get($footer-navigation, 'footer-nav-highlight-text');
       }
     }
   }

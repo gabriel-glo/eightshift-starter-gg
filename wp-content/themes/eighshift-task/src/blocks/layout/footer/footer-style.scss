@@ -1,3 +1,7 @@
+$footer: (
+  footer-spacing: $base-gutter-size,
+);
+
 .footer {
   padding-top: 36px;
   padding-bottom: 36px;
@@ -5,8 +9,8 @@
   &__container {
     margin: 0 auto;
     max-width: $base-container-size;
-    // padding-left: $base-container-spacing;
-    // padding-right: $base-container-spacing;
+    padding-left: map-get($footer, 'footer-spacing');
+    padding-right: map-get($footer, 'footer-spacing');
   }
 
   &__inner {
@@ -20,7 +24,14 @@
   }
 
   &__logo-link {
-    width: 70px;
+    display: inline-block;
+    width: 85px;
+    padding-right: map-get($footer, 'footer-spacing');
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   &__tag-line {

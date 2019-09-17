@@ -120,7 +120,6 @@ export const WrapperOptions = (props) => {
           options={[
             { label: __('Default', 'eighshift-task'), value: 'default' },
             { label: __('Medium', 'eighshift-task'), value: 'medium' },
-            { label: __('Small', 'eighshift-task'), value: 'small' },
             { label: __('No Width', 'eighshift-task'), value: 'no-width' },
           ]}
           onChange={onChangeStyleContainerWidth}

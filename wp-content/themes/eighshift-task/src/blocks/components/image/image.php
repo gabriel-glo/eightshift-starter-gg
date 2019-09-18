@@ -26,5 +26,3 @@ $media = \wp_get_attachment_image(
 );
 
 echo wp_kses_post( $media );
-
-

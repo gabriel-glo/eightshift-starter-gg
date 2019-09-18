@@ -1,0 +1,28 @@
+.block-image-text {
+  $this: &;
+
+  @include flex-container(
+    $layout: (5,6),
+    $vertical: center,
+  );
+
+  &__position--left {
+    #{$this}__visual {
+      order: 0;
+    }
+
+    #{$this}__textual {
+      margin-left: calc-grid-width(1);
+    }
+  }
+
+  &__position--right {
+    #{$this}__visual {
+      order: 1;
+    }
+
+    #{$this}__textual {
+      margin-right: calc-grid-width(1);
+    }
+  }
+}

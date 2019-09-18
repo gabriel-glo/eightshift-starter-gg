@@ -1,0 +1,53 @@
+{
+  "blockName": "image-text",
+  "title": "Image Text",
+  "description" : "Image, heading, text and button block with custom settings.",
+  "category": "common",
+  "icon": {
+    "src": "align-left"
+  },
+  "keywords": [
+    "Image",
+    "Text",
+    "Button",
+    "Title"
+  ],
+  "attributes": {
+    "mediaId": {
+      "type": "number",
+      "manualAction": true
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": "https://via.placeholder.com/500",
+      "manualAction": true
+    },
+    "mediaSize": {
+      "type": "string",
+      "default": "large"
+    },
+    "mediaPosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "headingContent": {
+      "type": "string"
+    },
+    "headingLevel": {
+      "type": "number",
+      "default": 2
+    },
+    "headingStyleAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "headingStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "headingStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
+  }
+}

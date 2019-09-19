@@ -5,23 +5,23 @@ $paragraph: (
   ),
   sizes: (
     mobile: (
+      small: (
+        font-size: 16px,
+        line-height: 1.7,
+      ),
       default: (
         font-size: 16px,
-        line-height: 1,
-      ),
-      medium: (
-        font-size: 16px,
-        line-height: 1,
+        line-height: 1.5,
       ),
       big: (
         font-size: 18px,
-        line-height: 1,
+        line-height: 1.1,
       ),
     ),
     tablet: (
-      medium: (
+      default: (
         font-size: 18px,
-        line-height: 1,
+        line-height: 1.5,
       ),
       big: (
         font-size: 22px,

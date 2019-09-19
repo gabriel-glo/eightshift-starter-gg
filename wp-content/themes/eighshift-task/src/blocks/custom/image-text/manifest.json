@@ -1,0 +1,97 @@
+{
+  "blockName": "image-text",
+  "title": "Image Text",
+  "description" : "Image, heading, text and button block with custom settings.",
+  "category": "common",
+  "icon": {
+    "src": "align-left"
+  },
+  "keywords": [
+    "Image",
+    "Text",
+    "Button",
+    "Title"
+  ],
+  "attributes": {
+    "mediaPosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "includeBtn": {
+      "type": "boolean",
+      "default": true
+    },
+    "mediaId": {
+      "type": "number",
+      "manualAction": true
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": "https://via.placeholder.com/500",
+      "manualAction": true
+    },
+    "mediaSize": {
+      "type": "string",
+      "default": "large"
+    },
+    "headingContent": {
+      "type": "string"
+    },
+    "headingLevel": {
+      "type": "number",
+      "default": 2
+    },
+    "headingStyleAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "headingStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "headingStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
+    "paragraphContent": {
+      "type": "string"
+    },
+    "paragraphStyleAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "paragraphStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "paragraphStyleType": {
+      "type": "string",
+      "default": "primary"
+    },
+    "paragraphStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnTitle": {
+      "type": "string"
+    },
+    "btnUrl": {
+      "type": "string"
+    },
+    "btnStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnStyleSizeWidth": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnId": {
+      "type": "string"
+    }
+  }
+}

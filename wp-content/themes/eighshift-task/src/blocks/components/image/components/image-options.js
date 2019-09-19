@@ -10,7 +10,7 @@ export const ImageOptions = (props) => {
   return (
     <PanelBody title={__('Image Settings', 'eighshift-task')}>
       {onChangeMedia &&
-        <div>
+        <div className="components-base-control">
           <label htmlFor="media">{__('Image', 'eighshift-task')}</label>
           <MediaPlaceholder
             icon="format-image"

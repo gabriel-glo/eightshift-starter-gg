@@ -1,18 +1,35 @@
+$block-image-text: (
+  vertical-spacing: 20px,
+);
+
 .block-image-text {
   $this: &;
 
   @include flex-container(
-    $layout: (5,6),
-    $vertical: center,
+    $layout: (12, 12),
   );
+  @include media(tablet up) {
+    @include flex-container(
+      $layout: (5,6),
+      $vertical: center,
+    );
+  }
+
 
   &__position--left {
     #{$this}__visual {
       order: 0;
+      margin-bottom: map-get-strict($block-image-text, vertical-spacing);
+
+      @include media(tablet up) {
+        margin-bottom: 0;
+      }
     }
 
     #{$this}__textual {
-      margin-left: calc-grid-width(1);
+      @include media(tablet up) {
+        margin-left: calc-grid-width(1);
+      }
     }
   }
 
@@ -22,7 +39,12 @@
     }
 
     #{$this}__textual {
-      margin-right: calc-grid-width(1);
+      margin-bottom: map-get-strict($block-image-text, vertical-spacing);
+
+      @include media(tablet up) {
+        margin-bottom: 0;
+        margin-right: calc-grid-width(1);
+      }
     }
   }
 

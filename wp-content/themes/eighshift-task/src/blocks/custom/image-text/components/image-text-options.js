@@ -7,7 +7,10 @@ export const ImageTextOptions = (props) => {
       mediaPosition,
       includeBtn,
     },
-    actions,
+    actions: {
+      onChangeMediaPosition,
+      onChangeIncludeBtn,
+    },
   } = props;
 
   return (
@@ -20,15 +23,15 @@ export const ImageTextOptions = (props) => {
             { label: __('Left', 'eighshift-task'), value: 'left' },
             { label: __('Right', 'eighshift-task'), value: 'right' },
           ]}
-          onChange={actions.onChangeMediaPosition}
+          onChange={onChangeMediaPosition}
         />
       }
 
-      {actions.onChangeIncludeBtn &&
+      {onChangeIncludeBtn &&
         <ToggleControl
           label={__('Include button', 'eighshift-task')}
           checked={includeBtn}
-          onChange={actions.onChangeIncludeBtn}
+          onChange={onChangeIncludeBtn}
         />
       }
     </PanelBody>

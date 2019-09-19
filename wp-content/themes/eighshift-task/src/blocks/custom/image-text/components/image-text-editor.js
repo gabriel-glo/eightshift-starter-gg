@@ -25,7 +25,11 @@ export const ImageTextEditor = (props) => {
       btnStyleColor,
       btnStyleSizeWidth,
     },
-    actions,
+    actions: {
+      onChangeHeadingContent,
+      onChangeParagraphContent,
+      onChangeBtnTitle,
+    },
   } = props;
 
   const blockClasses = classnames([
@@ -54,7 +58,7 @@ export const ImageTextEditor = (props) => {
         <HeadingEditor
           blockClass={blockClass}
           content={headingContent}
-          onChangeContent={actions.onChangeHeadingContent}
+          onChangeContent={onChangeHeadingContent}
           styleAlign={headingStyleAlign}
           styleColor={headingStyleColor}
           styleSize={headingStyleSize}
@@ -62,7 +66,7 @@ export const ImageTextEditor = (props) => {
         <ParagraphEditor
           blockClass={blockClass}
           content={paragraphContent}
-          onChangeContent={actions.onChangeParagraphContent}
+          onChangeContent={onChangeParagraphContent}
           styleAlign={paragraphStyleAlign}
           styleColor={paragraphStyleColor}
           styleSize={paragraphStyleSize}
@@ -71,7 +75,7 @@ export const ImageTextEditor = (props) => {
           <ButtonEditor
             blockClass={blockClass}
             title={btnTitle}
-            onChangeTitle={actions.onChangeBtnTitle}
+            onChangeTitle={onChangeBtnTitle}
             styleSize={btnStyleSize}
             styleColor={btnStyleColor}
             styleSizeWidth={btnStyleSizeWidth}

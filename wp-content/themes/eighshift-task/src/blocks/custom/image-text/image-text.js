@@ -18,8 +18,8 @@ import { ParagraphToolbar } from '../../components/paragraph/components/paragrap
 export const ImageText = (props) => {
   const {
     setAttributes,
+    attributes,
     attributes: {
-      mediaPosition,
       includeBtn,
       headingStyleColor,
       headingStyleSize,
@@ -53,7 +53,7 @@ export const ImageText = (props) => {
     <Fragment>
       <InspectorControls>
         <ImageTextOptions
-          attributes={props.attributes}
+          attributes={attributes}
           actions={actions}
         />
         <ImageOptions
@@ -99,7 +99,7 @@ export const ImageText = (props) => {
         />
       </BlockControls>
       <ImageTextEditor
-        attributes={props.attributes}
+        attributes={attributes}
         actions={actions}
       />
     </Fragment>

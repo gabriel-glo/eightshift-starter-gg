@@ -9,8 +9,10 @@ import { ImageTextOptions } from './components/image-text-options';
 
 import { ImageOptions } from '../../components/image/components/image-options';
 import { HeadingOptions } from '../../components/heading/components/heading-options';
+import { ParagraphOptions } from '../../components/paragraph/components/paragraph-options';
 
 import { HeadingToolbar } from '../../components/heading/components/heading-toolbar';
+import { ParagraphToolbar } from '../../components/paragraph/components/paragraph-toolbar';
 
 export const ImageText = (props) => {
   const {
@@ -19,8 +21,11 @@ export const ImageText = (props) => {
       mediaPosition,
       headingStyleColor,
       headingStyleSize,
+      paragraphStyleColor,
+      paragraphStyleSize,
       headingStyleAlign,
       headingLevel,
+      paragraphStyleAlign,
     },
   } = props;
 
@@ -52,6 +57,12 @@ export const ImageText = (props) => {
           styleSize={headingStyleSize}
           onChangeStyleSize={actions.onChangeHeadingStyleSize}
         />
+        <ParagraphOptions
+          styleColor={paragraphStyleColor}
+          onChangeStyleColor={actions.onChangeParagraphStyleColor}
+          styleSize={paragraphStyleSize}
+          onChangeStyleSize={actions.onChangeParagraphStyleSize}
+        />
       </InspectorControls>
       <BlockControls>
         <HeadingToolbar
@@ -59,6 +70,10 @@ export const ImageText = (props) => {
           onChangeLevel={actions.onChangeHeadingLevel}
           styleAlign={headingStyleAlign}
           onChangeStyleAlign={actions.onChangeHeadingStyleAlign}
+        />
+        <ParagraphToolbar
+          styleAlign={paragraphStyleAlign}
+          onChangeStyleAlign={actions.onChangeParagraphStyleAlign}
         />
       </BlockControls>
       <ImageTextEditor

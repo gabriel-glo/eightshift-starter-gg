@@ -2,6 +2,7 @@ import classnames from 'classnames';
 
 import { ImageEditor } from '../../../components/image/components/image-editor';
 import { HeadingEditor } from '../../../components/heading/components/heading-editor';
+import { ParagraphEditor } from '../../../components/paragraph/components/paragraph-editor';
 
 export const ImageTextEditor = (props) => {
   const {
@@ -13,6 +14,10 @@ export const ImageTextEditor = (props) => {
       headingStyleAlign,
       headingStyleColor,
       headingStyleSize,
+      paragraphContent,
+      paragraphStyleAlign,
+      paragraphStyleColor,
+      paragraphStyleSize,
     },
     actions,
   } = props;
@@ -47,6 +52,14 @@ export const ImageTextEditor = (props) => {
           styleAlign={headingStyleAlign}
           styleColor={headingStyleColor}
           styleSize={headingStyleSize}
+        />
+        <ParagraphEditor
+          blockClass={blockClass}
+          content={paragraphContent}
+          onChangeContent={actions.onChangeParagraphContent}
+          styleAlign={paragraphStyleAlign}
+          styleColor={paragraphStyleColor}
+          styleSize={paragraphStyleSize}
         />
       </div>
     </div>

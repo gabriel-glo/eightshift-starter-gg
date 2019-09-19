@@ -49,5 +49,24 @@
       "type": "string",
       "default": "default"
     },
+    "paragraphContent": {
+      "type": "string"
+    },
+    "paragraphStyleAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "paragraphStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "paragraphStyleType": {
+      "type": "string",
+      "default": "primary"
+    },
+    "paragraphStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
   }
 }

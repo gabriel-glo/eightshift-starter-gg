@@ -50,6 +50,17 @@ $textual_classes = "
         'styleSize' => $attributes['headingStyleSize'] ?? '',
       ]
     );
+
+    $this->render_block_view(
+      '/components/paragraph/paragraph.php',
+      [
+        'blockClass' => $block_class,
+        'content' => $attributes['paragraphContent'] ?? '',
+        'styleAlign' => $attributes['paragraphStyleAlign'] ?? '',
+        'styleColor' => $attributes['paragraphStyleColor'] ?? '',
+        'styleSize' => $attributes['paragraphStyleSize'] ?? '',
+      ]
+    );
     ?>
   </div>
 </div>

@@ -13,7 +13,7 @@ $media_position = $attributes['mediaPosition'] ?? '';
 $include_btn    = $attributes['includeBtn'] ?? '';
 
 $block_classes = "
-  {$block_class}__position--{$media_position}
+  {$block_class}__image-position--{$media_position}
   $block_class
 ";
 

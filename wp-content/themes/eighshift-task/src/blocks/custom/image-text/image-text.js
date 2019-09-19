@@ -53,10 +53,8 @@ export const ImageText = (props) => {
     <Fragment>
       <InspectorControls>
         <ImageTextOptions
-          mediaPosition={mediaPosition}
-          onChangeMediaPosition={actions.onChangeMediaPosition}
-          includeBtn={includeBtn}
-          onChangeIncludeBtn={actions.onChangeIncludeBtn}
+          attributes={props.attributes}
+          actions={actions}
         />
         <ImageOptions
           onChangeMedia={actions.onChangeMedia}

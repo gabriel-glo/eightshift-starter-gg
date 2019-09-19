@@ -16,7 +16,7 @@ $block-image-text: (
   }
 
 
-  &__position--left {
+  &__image-position--left {
     #{$this}__visual {
       order: 0;
       margin-bottom: map-get-strict($block-image-text, vertical-spacing);
@@ -33,7 +33,7 @@ $block-image-text: (
     }
   }
 
-  &__position--right {
+  &__image-position--right {
     #{$this}__visual {
       order: 1;
     }
@@ -48,11 +48,11 @@ $block-image-text: (
     }
   }
 
-  .heading {
+  &__heading {
     padding-bottom: 25px;
   }
 
-  .paragraph {
+  &__paragraph {
     padding-bottom: 45px;
   }
 }

@@ -29,7 +29,7 @@ export const ImageTextEditor = (props) => {
   } = props;
 
   const blockClasses = classnames([
-    `${blockClass}__position--${mediaPosition}`,
+    `${blockClass}__image-position--${mediaPosition}`,
     blockClass,
   ]);
 

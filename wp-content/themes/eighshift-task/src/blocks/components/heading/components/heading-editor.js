@@ -7,6 +7,7 @@ export const HeadingEditor = (props) => {
     blockClass,
     content,
     onChangeContent,
+    level,
     styleAlign,
     styleColor,
     styleSize,

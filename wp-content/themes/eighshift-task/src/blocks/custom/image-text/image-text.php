@@ -10,6 +10,7 @@ namespace Eighshift_Task\Blocks;
 
 $block_class    = $attributes['blockClass'] ?? '';
 $media_position = $attributes['mediaPosition'] ?? '';
+$include_btn    = $attributes['includeBtn'] ?? '';
 
 $block_classes = "
   {$block_class}__position--{$media_position}
@@ -61,6 +62,19 @@ $textual_classes = "
         'styleSize' => $attributes['paragraphStyleSize'] ?? '',
       ]
     );
+    if ( $include_btn ) {
+      $this->render_block_view(
+        '/components/button/button.php',
+        [
+          'blockClass' => $block_class,
+          'title' => $attributes['btnTitle'] ?? '',
+          'url' => $attributes['btnUrl'] ?? '',
+          'styleColor' => $attributes['btnStyleColor'] ?? '',
+          'styleSize' => $attributes['btnStyleSize'] ?? '',
+          'styleSizeWidth' => $attributes['btnStyleSizeWidth'] ?? '',
+        ]
+      );
+    }
     ?>
   </div>
 </div>

@@ -3,10 +3,12 @@ import classnames from 'classnames';
 import { ImageEditor } from '../../../components/image/components/image-editor';
 import { HeadingEditor } from '../../../components/heading/components/heading-editor';
 import { ParagraphEditor } from '../../../components/paragraph/components/paragraph-editor';
+import { ButtonEditor } from '../../../components/button/components/button-editor';
 
 export const ImageTextEditor = (props) => {
   const {
     attributes: {
+      includeBtn,
       blockClass,
       mediaUrl,
       mediaPosition,
@@ -18,6 +20,10 @@ export const ImageTextEditor = (props) => {
       paragraphStyleAlign,
       paragraphStyleColor,
       paragraphStyleSize,
+      btnTitle,
+      btnStyleSize,
+      btnStyleColor,
+      btnStyleSizeWidth,
     },
     actions,
   } = props;
@@ -61,6 +67,16 @@ export const ImageTextEditor = (props) => {
           styleColor={paragraphStyleColor}
           styleSize={paragraphStyleSize}
         />
+        {includeBtn &&
+          <ButtonEditor
+            blockClass={blockClass}
+            title={btnTitle}
+            onChangeTitle={actions.onChangeBtnTitle}
+            styleSize={btnStyleSize}
+            styleColor={btnStyleColor}
+            styleSizeWidth={btnStyleSizeWidth}
+          />
+        }
       </div>
     </div>
   );

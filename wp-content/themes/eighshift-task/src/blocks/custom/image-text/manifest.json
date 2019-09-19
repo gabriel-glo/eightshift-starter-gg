@@ -13,6 +13,14 @@
     "Title"
   ],
   "attributes": {
+    "mediaPosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "includeBtn": {
+      "type": "boolean",
+      "default": true
+    },
     "mediaId": {
       "type": "number",
       "manualAction": true
@@ -25,10 +33,6 @@
     "mediaSize": {
       "type": "string",
       "default": "large"
-    },
-    "mediaPosition": {
-      "type": "string",
-      "default": "left"
     },
     "headingContent": {
       "type": "string"
@@ -68,5 +72,26 @@
       "type": "string",
       "default": "default"
     },
+    "btnTitle": {
+      "type": "string"
+    },
+    "btnUrl": {
+      "type": "string"
+    },
+    "btnStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnStyleSizeWidth": {
+      "type": "string",
+      "default": "default"
+    },
+    "btnId": {
+      "type": "string"
+    }
   }
 }

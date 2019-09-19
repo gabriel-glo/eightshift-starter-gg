@@ -1,10 +1,12 @@
 import { __ } from '@wordpress/i18n';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { PanelBody, SelectControl, CheckboxControl } from '@wordpress/components';
 
 export const ImageTextOptions = (props) => {
   const {
     mediaPosition,
     onChangeMediaPosition,
+    includeBtn,
+    onChangeIncludeBtn,
   } = props;
 
   return (
@@ -18,6 +20,14 @@ export const ImageTextOptions = (props) => {
             { label: __('Right', 'eighshift-task'), value: 'right' },
           ]}
           onChange={onChangeMediaPosition}
+        />
+      }
+
+      {onChangeIncludeBtn &&
+        <CheckboxControl
+          label={__('Include button', 'eighshift-task')}
+          checked={includeBtn}
+          onChange={onChangeIncludeBtn}
         />
       }
     </PanelBody>

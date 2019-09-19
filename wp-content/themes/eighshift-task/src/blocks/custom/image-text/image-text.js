@@ -10,6 +10,7 @@ import { ImageTextOptions } from './components/image-text-options';
 import { ImageOptions } from '../../components/image/components/image-options';
 import { HeadingOptions } from '../../components/heading/components/heading-options';
 import { ParagraphOptions } from '../../components/paragraph/components/paragraph-options';
+import { ButtonOptions } from '../../components/button/components/button-options';
 
 import { HeadingToolbar } from '../../components/heading/components/heading-toolbar';
 import { ParagraphToolbar } from '../../components/paragraph/components/paragraph-toolbar';
@@ -19,10 +20,17 @@ export const ImageText = (props) => {
     setAttributes,
     attributes: {
       mediaPosition,
+      includeBtn,
       headingStyleColor,
       headingStyleSize,
       paragraphStyleColor,
       paragraphStyleSize,
+      btnUrl,
+      btnStyleSize,
+      btnStyleColor,
+      btnStyleSizeWidth,
+      btnId,
+
       headingStyleAlign,
       headingLevel,
       paragraphStyleAlign,
@@ -47,6 +55,8 @@ export const ImageText = (props) => {
         <ImageTextOptions
           mediaPosition={mediaPosition}
           onChangeMediaPosition={actions.onChangeMediaPosition}
+          includeBtn={includeBtn}
+          onChangeIncludeBtn={actions.onChangeIncludeBtn}
         />
         <ImageOptions
           onChangeMedia={actions.onChangeMedia}
@@ -63,6 +73,20 @@ export const ImageText = (props) => {
           styleSize={paragraphStyleSize}
           onChangeStyleSize={actions.onChangeParagraphStyleSize}
         />
+        {includeBtn &&
+          <ButtonOptions
+            url={btnUrl}
+            onChangeUrl={actions.onChangeBtnUrl}
+            styleSize={btnStyleSize}
+            onChangeStyleSize={actions.onChangeBtnStyleSize}
+            styleColor={btnStyleColor}
+            onChangeStyleColor={actions.onChangeBtnStyleColor}
+            styleSizeWidth={btnStyleSizeWidth}
+            onChangeStyleSizeWidth={actions.onChangeBtnStyleSizeWidth}
+            btnId={btnId}
+            onChangeBtnId={actions.onChangeBtnId}
+          />
+        }
       </InspectorControls>
       <BlockControls>
         <HeadingToolbar

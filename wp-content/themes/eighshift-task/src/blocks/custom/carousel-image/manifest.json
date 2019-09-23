@@ -12,7 +12,7 @@
   ],
   "hasWrapper": false,
   "parent": [
-    "eightshift-task/carousel"
+    "eighshift-task/carousel"
   ],
   "attributes": {
     "mediaId": {
@@ -21,6 +21,6 @@
     "mediaUrl": {
       "type": "string",
       "default": "https://via.placeholder.com/500"
-    },
+    }
   }
 }

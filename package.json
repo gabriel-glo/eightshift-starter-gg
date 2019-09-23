@@ -1,11 +1,11 @@
 {
-  "name": "eighshift-task",
+  "name": "eightshift-task",
   "version": "1.0.0",
   "author": "Team Eightshift",
   "main": "",
   "scripts": {
-    "__eslintTheme": "eslint wp-content/themes/eighshift-task/**/*.js",
-    "__stylelintTheme": "stylelint wp-content/themes/eighshift-task/**/*.scss",
+    "__eslintTheme": "eslint wp-content/themes/eightshift-task/**/*.js",
+    "__stylelintTheme": "stylelint wp-content/themes/eightshift-task/**/*.scss",
     "lintStyle": "npm run __stylelintTheme",
     "lintJs": "npm run __eslintTheme",
     "lint": "npm run lintJs && npm run lintStyle && bash bin/lintPhp.sh",

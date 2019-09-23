@@ -1,0 +1,24 @@
+{
+  "blockName": "carousel",
+  "title": "Carousel",
+  "description" : "Carousel block with custom settings.",
+  "category": "common",
+  "icon": {
+    "src": "format-gallery"
+  },
+  "keywords": [
+    "carousel"
+  ],
+  "hasInnerBlocks": true,
+  "attributes": {
+    "allowedBlocks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "eightshift-task/carousel-image"
+      ]
+    }
+  }
+}

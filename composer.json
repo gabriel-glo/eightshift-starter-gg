@@ -1,5 +1,5 @@
 {
-  "name": "infinum/eighshift-task-internal",
+  "name": "infinum/eightshift-task-internal",
   "description": "This repository contains all the tools you need to start building a modern WordPress theme, using all the latest front end development tools.",
   "require-dev": {
     "infinum/coding-standards-wp": "0.4.1",
@@ -12,7 +12,7 @@
   },
   "autoload": {
     "classmap": [
-      "wp-content/themes/eighshift-task/src/"
+      "wp-content/themes/eightshift-task/src/"
     ]
   },
   "minimum-stability": "dev",

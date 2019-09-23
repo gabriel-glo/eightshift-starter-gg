@@ -5,7 +5,7 @@
  * Define global environment variable, and define certain
  * settings based on it.
  *
- * @package Eighshift_Task
+ * @package Eightshift_Task
  *
  * @since 1.0.0
  */

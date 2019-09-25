@@ -1,7 +1,7 @@
+import classnames from 'classnames';
 import { InnerBlocks } from '@wordpress/editor';
 
 export const CarouselEditor = (props) => {
-  console.log(props.attributes);
   const {
     attributes: {
       blockClass,
@@ -10,9 +10,16 @@ export const CarouselEditor = (props) => {
     },
   } = props;
 
+  const carouselClasses = classnames([
+    blockClass,
+    blockJsClass,
+  ]);
+
   return (
-    <InnerBlocks
-      allowedBlocks={allowedBlocks}
-    />
+    <div className={carouselClasses}>
+      <InnerBlocks
+        allowedBlocks={allowedBlocks}
+      />
+    </div>
   );
 };

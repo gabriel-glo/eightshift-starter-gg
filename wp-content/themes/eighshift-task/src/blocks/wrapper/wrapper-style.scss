@@ -34,6 +34,7 @@ $wrapper: (
 .wrapper {
   $this: &;
   position: relative;
+  overflow-x: scroll;
 
   &__show-only-mobile--1 {
     @include media(tablet up) {

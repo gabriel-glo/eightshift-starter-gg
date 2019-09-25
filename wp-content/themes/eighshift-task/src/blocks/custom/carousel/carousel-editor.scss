@@ -2,16 +2,11 @@
   .editor-block-list {
     &__layout {
       display: flex;
-      overflow-x: scroll;
     }
 
     &__block {
       flex: 1 0 auto;
       padding-right: 30px;
-
-      &:first-child {
-        margin-left: calc-grid-width(3);
-      }
     }
   }
 }

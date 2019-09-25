@@ -17,14 +17,9 @@ $slide_class = "
 
 $image_class = "{$block_class}__img";
 
-$media = \wp_get_attachment_image(
-  $attributes['id'],
-  'full',
-  '',
-  [ 'class' => $image_class ]
-);
+$media_url = \wp_get_attachment_image_src( $attributes['mediaId'], 'full' );
 ?>
 
 <div class="<?php echo esc_attr( $slide_class ); ?>">
-  <?php echo wp_kses_post( $media ); ?>
+  <img src="<?php echo esc_url( $media_url[0] ); ?>" alt="" class="<?php echo esc_attr( $image_class ); ?>">
 </div>

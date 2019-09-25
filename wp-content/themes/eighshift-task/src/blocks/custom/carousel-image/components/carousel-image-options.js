@@ -4,7 +4,9 @@ import { PanelBody } from '@wordpress/components';
 
 export const CarouselImageOptions = (props) => {
   const {
-    onChangeMedia,
+    actions: {
+      onChangeMedia,
+    },
   } = props;
 
   return (

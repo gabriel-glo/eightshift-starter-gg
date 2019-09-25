@@ -1,0 +1,18 @@
+@import '~swiper/components/core/core';
+
+.block-carousel {
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow {
+    padding: 25px 10px;
+  }
+
+  &__pagination {
+    padding: 10px;
+    font-weight: bold;
+  }
+}

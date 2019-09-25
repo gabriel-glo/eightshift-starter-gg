@@ -1,5 +1,9 @@
-.wrapper__show-only-mobile--1 {
-  @include media(tablet up) {
-    display: block;
+.wrapper {
+  overflow-x: scroll;
+
+  &__show-only-mobile--1 {
+    @include media(tablet up) {
+      display: block;
+    }
   }
 }

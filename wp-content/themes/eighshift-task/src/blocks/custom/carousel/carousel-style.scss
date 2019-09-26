@@ -1,6 +1,9 @@
 @import '~swiper/components/core/core';
 
 .block-carousel {
+  padding-left: calc-grid-width(2);
+  padding-right: calc-grid-width(2);
+
   &__navigation {
     display: flex;
     justify-content: center;

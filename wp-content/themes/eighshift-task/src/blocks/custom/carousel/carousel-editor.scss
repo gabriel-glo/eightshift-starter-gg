@@ -1,4 +1,6 @@
 .block-carousel {
+  overflow-x: scroll;
+
   .editor-block-list {
     &__layout {
       display: flex;

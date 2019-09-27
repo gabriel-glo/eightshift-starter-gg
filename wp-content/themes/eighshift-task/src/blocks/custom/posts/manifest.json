@@ -1,0 +1,38 @@
+{
+  "blockName": "posts",
+  "title": "Posts",
+  "description" : "Listing latest posts",
+  "category": "common",
+  "icon": {
+    "src": "grid-view"
+  },
+  "keywords": [
+    "Posts",
+    "Listing"
+  ],
+  "attributes": {
+    "headingContent": {
+      "type": "string"
+    },
+    "headingLevel": {
+      "type": "number",
+      "default": 2
+    },
+    "headingStyleAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "headingStyleColor": {
+      "type": "string",
+      "default": "default"
+    },
+    "headingStyleSize": {
+      "type": "string",
+      "default": "default"
+    },
+    "postNumber": {
+      "type": "number",
+      "default": 4
+    }
+  }
+}

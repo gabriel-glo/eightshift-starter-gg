@@ -1,6 +1,6 @@
 {
   "extends": "@infinumjs/stylelint-config",
-  "ignoreFiles": "wp-content/themes/*/skin/**/*.css",
+  "ignoreFiles": "wp-content/themes/*/public/*.css",
   "rules": {
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [ "always", {

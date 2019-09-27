@@ -4,8 +4,8 @@
   "author": "Team Eightshift",
   "main": "",
   "scripts": {
-    "__eslintTheme": "eslint wp-content/themes/eighshift-task/**/*.js",
-    "__stylelintTheme": "stylelint wp-content/themes/eighshift-task/**/*.scss",
+    "__eslintTheme": "eslint wp-content/themes/eighshift-task/src/**/*.js",
+    "__stylelintTheme": "stylelint wp-content/themes/eighshift-task/src/**/*.scss",
     "lintStyle": "npm run __stylelintTheme",
     "lintJs": "npm run __eslintTheme",
     "lint": "npm run lintJs && npm run lintStyle && bash bin/lintPhp.sh",
@@ -71,6 +71,7 @@
     "media-blender": "^2.1.0",
     "normalize-scss": "^7.0.1",
     "postcss-font-magician": "^2.2.2",
+    "swiper": "^5.0.3",
     "webfontloader": "^1.6.28",
     "whatwg-fetch": "^3.0.0"
   },

@@ -1,0 +1,14 @@
+.block-carousel {
+  overflow-x: scroll;
+
+  .editor-block-list {
+    &__layout {
+      display: flex;
+    }
+
+    &__block {
+      flex: 1 0 auto;
+      padding-right: 30px;
+    }
+  }
+}

@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - working-directory: ./
+    - name: List files
+      run: ls -al
     - name: Install node dependencies
       run: npm install
     - name: Install composer dependencies

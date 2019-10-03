@@ -1,0 +1,21 @@
+name: CI Test
+
+on: 
+  push: 
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Install dependencies and build assets
+      run: | 
+        npm install
+        composer install --no-dev --no-scripts
+        npm run build
+    - name: List files
+      run: ls -al
+      

@@ -1,0 +1,31 @@
+name: Main CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies and build assets
+      run: |
+        echo " ===== Folder structure before build ===== "
+        ls -al
+        
+        echo " ===== Installing dependencies ===== "
+        npm install
+        composer install --no-dev --no-scripts
+        
+        echo " ===== Building assets ===== "
+        # npm rebuild node-sass
+        npm run build
+        
+        echo " ===== Folder structure after build ===== "
+        ls -al
+      env:
+        CI: true

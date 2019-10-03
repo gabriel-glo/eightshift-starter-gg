@@ -11,11 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Install dependencies and build assets
-      run: | 
-        npm install
-        composer install --no-dev --no-scripts
-        npm run build
+    - name: Install node dependencies
+      run: npm install
+    - name: Install composer dependencies
+      run: composer install --no-dev --no-scripts
+    - name: Build assets
+      run: npm run build
     - name: List files
       run: ls -al
       

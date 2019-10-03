@@ -11,15 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - working-directory: ./
     - name: List files
+      working-directory: ./
       run: ls -al
     - name: Install node dependencies
+      working-directory: ./
       run: npm install
     - name: Install composer dependencies
+      working-directory: ./
       run: composer install --no-dev --no-scripts
     - name: Build assets
+      working-directory: ./
       run: npm run build
     - name: List files
+      working-directory: ./
       run: ls -al
       

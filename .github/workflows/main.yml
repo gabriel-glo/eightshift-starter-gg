@@ -11,8 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: List files
+    - name: Get current path
+      run: pwd
+    - name: List files one lvl down
       working-directory: ./../
+      run: ls -al
+    - name: List files two lvl down
+      working-directory: ./../../
       run: ls -al
 #    - name: Install node dependencies
  #     working-directory: ./

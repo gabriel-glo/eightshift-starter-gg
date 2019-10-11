@@ -26,28 +26,16 @@ export class Posts extends Component {
       return postList.map((postListItem) => {
         return {
           id: postListItem.id,
-          link: postListItem.link,
-          date: new Date(postListItem.date),
+          url: postListItem.link,
+          date: postListItem.date.formated,
           title: postListItem.title.rendered,
           excerpt: postListItem.excerpt.rendered,
-          categoryIds: postListItem.categories,
-        };
-      });
-    }).then((itemsArray) => {
-      return itemsArray.map((item) => {
-        return {
-          ...item,
-          dateParsed: {
-            day: item.date.getDate(),
-            month: item.date.getMonth() + 1,
-            year: item.date.getFullYear(),
-            hour: item.date.getHours(),
-            minute: item.date.getMinutes(),
-          },
+          categories: postListItem.categories,
+          featuredImageFull: postListItem.featuredImage.full,
+          featuredImageThumb: postListItem.featuredImage.thumbnail,
         };
       });
     }).then((postListArray) => {
-      console.log(postListArray);
       this.setState(() => {
         return {
           posts: postListArray,

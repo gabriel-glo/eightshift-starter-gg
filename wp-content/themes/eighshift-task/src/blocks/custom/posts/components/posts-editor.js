@@ -1,4 +1,6 @@
 import { Spinner } from '@wordpress/components';
+import classnames from 'classnames';
+
 import { HeadingEditor } from '../../../components/heading/components/heading-editor';
 import { Post } from './../parts/post';
 
@@ -18,18 +20,9 @@ export const PostsEditor = (props) => {
     },
   } = props;
 
-  const post = (!posts) ? <Spinner /> : posts.map((item) => {
-    return (
-      <div key={item.id} className="">
-        <Post
-          blockClass={blockClass}
-          link={item.link}
-          title={item.title}
-          excerpt={item.excerpt}
-        />
-      </div>
-    );
-  });
+  const listingClasses = classnames([
+    `${blockClass}__listing`,
+  ]);
 
   return (
     <div className={blockClass}>
@@ -42,23 +35,27 @@ export const PostsEditor = (props) => {
         styleColor={headingStyleColor}
         styleSize={headingStyleSize}
       />
-      <div>
-        {post}
-      </div>
+      {
+        !posts ?
+          <Spinner /> :
+          <div className={listingClasses}>
+            {
+              posts.map((item) => {
+                return (
+                  <Post
+                    key={item.id}
+                    parentClass={blockClass}
+                    title={item.title}
+                    excerpt={item.excerpt}
+                    categories={item.categories}
+                    featuredImageThumb={item.featuredImageThumb}
+                    date={item.date}
+                  />
+                );
+              })
+            }
+          </div>
+      }
     </div>
   );
 };
-
-// {
-  //   posts && posts.map((post) => {
-    //     return (
-      //       <div key={post.id}>
-      //         <p>{post.date}</p>
-      //         <h4>{post.title}</h4>
-      //         <div>
-      //           {post.excerpt}
-      //         </div>
-      //       </div>
-      //     );
-      //   })
-      // }

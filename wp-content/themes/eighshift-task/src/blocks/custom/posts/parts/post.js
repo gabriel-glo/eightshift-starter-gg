@@ -1,33 +1,83 @@
+import classnames from 'classnames';
+
 export const Post = (props) => {
   const {
+    parentClass,
     title,
     excerpt,
+    featuredImageThumb,
+    categories,
+    date,
   } = props;
 
-  const componentClass = 'testimonial';
-  const metaClass = `${componentClass}__meta`;
-  const ratingClass = `${componentClass}__rating`;
-  const ratingStarsClass = `${componentClass}__rating-stars`;
-  const titleClass = `${componentClass}__title`;
-  const excerptClass = `${componentClass}__excerpt`;
-  const authorClass = `${componentClass}__author`;
+  const postClasses = classnames([
+    `${parentClass}__post`,
+  ]);
+
+  const imgClasses = classnames([
+    `${parentClass}__post-image`,
+  ]);
+
+  const dateClasses = classnames([
+    `${parentClass}__post-date`,
+  ]);
+
+  const headingClasses = classnames([
+    'heading__size--small',
+    `${parentClass}__post-title`,
+  ]);
+
+  const excerptClasses = classnames([
+    'paragraph__size--default',
+    `${parentClass}__post-excerpt`,
+  ]);
+
+  const categoriesClasses = classnames([
+    `${parentClass}__post-category-list`,
+  ]);
+
+  const categoryClasses = classnames([
+    `${parentClass}__post-category`,
+  ]);
 
   return (
-    <div className={componentClass}>
-      <div className={metaClass}>
-        <div className={ratingClass}>
+    <div className={postClasses}>
+      {
+        featuredImageThumb &&
+        <img src={featuredImageThumb[0]} alt="" className={imgClasses} />
+      }
+      {
+        date &&
+        <span className={dateClasses}>
+          {date}
+        </span>
+      }
+      {
+        title &&
+        <h4 className={headingClasses}>
+          {title}
+        </h4>
+      }
+      {
+        excerpt &&
+        <p className={excerptClasses}>
+          {excerpt}
+        </p>
+      }
+      {
+        categories &&
+        <div className={categoriesClasses}>
+          {
+            categories.map((category) => {
+              return (
+                <span key={category.id} className={categoryClasses}>
+                  {category.name}
+                </span>
+              );
+            })
+          }
         </div>
-        <div className={ratingStarsClass}>
-        </div>
-      </div>
-      <div className={titleClass}>
-        {title}
-      </div>
-      <div className={excerptClass}>
-        {excerpt}
-      </div>
-      <div className={authorClass}>
-      </div>
+      }
     </div>
   );
 };

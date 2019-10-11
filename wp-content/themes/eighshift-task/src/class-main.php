@@ -19,6 +19,7 @@ use Eighshift_Task\General;
 use Eighshift_Task\Blocks;
 use Eighshift_Task\Admin\Menu;
 use Eighshift_Task\Theme;
+use Eighshift_Task\Rest;
 
 /**
  * The main start class.
@@ -62,6 +63,9 @@ class Main extends LibMain {
 
       // Theme.
       Theme\Theme::class => [ Manifest\Manifest::class ],
+
+      // REST.
+      Rest\Fields\Posts_Fields::class => [ Manifest\Manifest::class ],
     ];
   }
 }

@@ -9,6 +9,8 @@ $block-posts: (
   }
 
   &__listing {
+    padding-bottom: 65px;
+
     @include media(mobile) {
       @include flex-container(
         $layout: (12)
@@ -27,7 +29,10 @@ $block-posts: (
   }
 
   &__post {
+    text-decoration: none;
+    color: inherit;
     margin-bottom: 20px;
+    display: block;
   }
 
   &__post-image {
@@ -39,6 +44,9 @@ $block-posts: (
   &__post-date {
     @extend %paragraph-reset;
     font-size: 14px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 5px;
     font-style: italic;
     color: map-get-strict($block-posts, 'date-color');
   }

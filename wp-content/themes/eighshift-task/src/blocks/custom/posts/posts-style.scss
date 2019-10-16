@@ -28,6 +28,11 @@ $block-posts: (
     }
   }
 
+  .btn-load-more {
+    display: block;
+    margin: 0 auto;
+  }
+
   &__post {
     text-decoration: none;
     color: inherit;

@@ -53,6 +53,7 @@ class Main extends LibMain {
       Admin\Admin::class => [ Manifest\Manifest::class ],
       Admin\Login::class,
       Admin\Media::class,
+      Admin\Ajax_Post_Load::class,
 
       // Menu.
       Menu\Menu::class,

@@ -20,6 +20,10 @@ export const PostsEditor = (props) => {
     },
   } = props;
 
+  const wrapperClasses = classnames([
+    `${blockClass}__wrap`,
+  ]);
+
   const listingClasses = classnames([
     `${blockClass}__listing`,
   ]);
@@ -38,22 +42,24 @@ export const PostsEditor = (props) => {
       {
         !posts ?
           <Spinner /> :
-          <div className={listingClasses}>
-            {
-              posts.map((item) => {
-                return (
-                  <Post
-                    key={item.id}
-                    parentClass={blockClass}
-                    title={item.title}
-                    excerpt={item.excerpt}
-                    categories={item.categories}
-                    featuredImageThumb={item.featuredImageThumb}
-                    date={item.date}
-                  />
-                );
-              })
-            }
+          <div className={wrapperClasses}>
+            <div className={listingClasses}>
+              {
+                posts.map((item) => {
+                  return (
+                    <Post
+                      key={item.id}
+                      parentClass={blockClass}
+                      title={item.title}
+                      excerpt={item.excerpt}
+                      categories={item.categories}
+                      featuredImageThumb={item.featuredImageThumb}
+                      date={item.date}
+                    />
+                  );
+                })
+              }
+            </div>
           </div>
       }
     </div>

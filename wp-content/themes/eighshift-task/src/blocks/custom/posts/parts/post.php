@@ -47,43 +47,28 @@ $category_classes = "
 
 ?>
 <a href="<?php echo esc_url( $url ); ?>" class="<?php echo esc_attr( $post_classes ); ?>">
-  <?php
-  if ( ! empty( $featured_image ) ) {
-    ?>
+
+  <?php if ( ! empty( $featured_image ) ) { ?>
     <img src="<?php echo esc_url( $featured_image ); ?>" alt="" class="<?php echo esc_attr( $img_classes ); ?>">
-    <?php
-  }
-  ?>
+  <?php } ?>
 
-  <?php
-  if ( ! empty( $date ) ) {
-    ?>
-    <span class="<?php echo esc_attr( $date_classes ); ?>">
+  <?php if ( ! empty( $date ) ) { ?>
+    <p class="<?php echo esc_attr( $date_classes ); ?>">
       <?php echo esc_html( $date ); ?>
-    </span>
-    <?php
-  }
-  ?>
+    </p>
+  <?php } ?>
 
-  <?php
-  if ( ! empty( $title ) ) {
-    ?>
+  <?php if ( ! empty( $title ) ) { ?>
     <h4 class="<?php echo esc_attr( $heading_classes ); ?>">
       <?php echo esc_html( $title ); ?>
     </h4>
-    <?php
-  }
-  ?>
+  <?php } ?>
 
-  <?php
-  if ( ! empty( $excerpt ) ) {
-    ?>
+  <?php if ( ! empty( $excerpt ) ) { ?>
     <p class="<?php echo esc_attr( $excerpt_classes ); ?>">
       <?php echo esc_html( $excerpt ); ?>
     </p>
-    <?php
-  }
-  ?>
+  <?php } ?>
 
   <?php
   if ( ! empty( $categories ) ) {

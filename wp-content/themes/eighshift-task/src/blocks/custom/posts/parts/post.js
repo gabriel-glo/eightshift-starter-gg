@@ -46,9 +46,9 @@ export const Post = (props) => {
       }
       {
         date &&
-        <span className={dateClasses}>
+        <p className={dateClasses}>
           {date}
-        </span>
+        </p>
       }
       {
         title &&

@@ -78,11 +78,13 @@ $listing_classes = "
 
     wp_reset_postdata();
 
-    $load_more_button = locate_template( 'src/blocks/custom/posts/parts/load-more.php' );
-
-    if ( ! empty( $load_more_button ) ) {
-      include $load_more_button;
-    }
+    $this->render_block_view(
+      '/custom/posts/parts/load-more.php',
+      [
+        'paginationQuery' => $pagination_query,
+        'parentClass'     => $parent_block_class,
+      ]
+    );
 
     wp_nonce_field( 'js-ajax-post-load-nonce', 'ajax-post-load-nonce' );
     ?>

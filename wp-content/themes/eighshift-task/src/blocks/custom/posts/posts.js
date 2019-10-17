@@ -27,12 +27,12 @@ export class Posts extends Component {
         return {
           id: postListItem.id,
           url: postListItem.link,
-          date: postListItem.date.formated,
+          date: postListItem.date_formated,
           title: postListItem.title.rendered,
           excerpt: postListItem.excerpt.rendered,
-          categories: postListItem.categories,
-          featuredImageFull: postListItem.featuredImage.full,
-          featuredImageThumb: postListItem.featuredImage.thumbnail,
+          categories: postListItem.category_names,
+          featuredImageFull: postListItem.featured_image.full,
+          featuredImageThumb: postListItem.featured_image.thumbnail,
         };
       });
     }).then((postListArray) => {

@@ -69,7 +69,9 @@ class Main extends LibMain {
       Theme\Theme::class => [ Manifest\Manifest::class ],
 
       // REST.
-      Rest\Fields\Posts_Fields::class => [ Manifest\Manifest::class ],
+      Rest\Fields\Post_Featured_Image_Field::class,
+      Rest\Fields\Post_Date_Field::class,
+      Rest\Fields\Post_Categories_Field::class,
     ];
   }
 }

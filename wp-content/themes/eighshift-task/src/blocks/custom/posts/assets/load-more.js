@@ -1,22 +1,22 @@
 import '@babel/polyfill';
 
-export class AjaxLoad {
+export class LoadMore {
 
   constructor(element) {
     this.element = element;
-    this.loadMore = this.element.parentNode.querySelector('.js-load-more');
+    this.loadMoreTrigger = this.element.parentNode.querySelector('.js-load-more');
     this.nonce = this.element.parentNode.querySelector('#ajax-post-load-nonce');
 
     this.postNumber = parseInt(this.element.getAttribute('data-post-number'), 10);
 
-    this.query = this.loadMore.getAttribute('data-query');
-    this.page = parseInt(this.loadMore.getAttribute('data-page'), 10);
-    this.maxPage = parseInt(this.loadMore.getAttribute('data-max-pages'), 10);
-    this.parentClass = this.loadMore.getAttribute('data-parent-class');
+    this.query = this.loadMoreTrigger.getAttribute('data-query');
+    this.page = parseInt(this.loadMoreTrigger.getAttribute('data-page'), 10);
+    this.maxPage = parseInt(this.loadMoreTrigger.getAttribute('data-max-pages'), 10);
+    this.parentClass = this.loadMoreTrigger.getAttribute('data-parent-class');
 
     this.adminAjaxUrl = themeLocalization.ajaxurl; // eslint-disable-line no-undef
 
-    this.action = 'load_posts';
+    this.action = 'latest_posts';
   }
 
   async loadPosts() {
@@ -46,7 +46,7 @@ export class AjaxLoad {
 
       this.page++;
       if (this.page === this.maxPage) {
-        this.loadMore.style.display = 'none';
+        this.loadMoreTrigger.style.display = 'none';
       }
 
       return response.json();

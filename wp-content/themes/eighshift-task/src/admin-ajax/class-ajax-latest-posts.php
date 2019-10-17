@@ -3,21 +3,21 @@
  * The Ajax_Post_Load specific functionality.
  *
  * @since   1.0.0
- * @package Eighshift_Task\Admin
+ * @package Eighshift_Task\Admin_Ajax
  */
 
-namespace Eighshift_Task\Admin;
+namespace Eighshift_Task\Admin_Ajax;
 
 use Eightshift_Libs\Core\Service;
 
 /**
  * Class Ajax_Post_Load
  *
- * Class that handles load_posts AJAX action.
+ * Class that handles latest_posts AJAX action.
  *
  * @since 1.0.0
  */
-class Ajax_Post_Load implements Service {
+class Ajax_Latest_Posts implements Service {
 
   /**
    * Register all the hooks
@@ -27,8 +27,8 @@ class Ajax_Post_Load implements Service {
    * @since 1.0.0
    */
   public function register() {
-    add_action( 'wp_ajax_load_posts', [ $this, 'ajax_load_posts' ] );
-    add_action( 'wp_ajax_nopriv_load_posts', [ $this, 'ajax_load_posts' ] );
+    add_action( 'wp_ajax_latest_posts', [ $this, 'latest_posts_callback' ] );
+    add_action( 'wp_ajax_nopriv_latest_posts', [ $this, 'latest_posts_callback' ] );
   }
 
   /**
@@ -39,7 +39,7 @@ class Ajax_Post_Load implements Service {
    *
    * @since 1.0.0
    */
-  public function ajax_load_posts() {
+  public function latest_posts_callback() {
     $output = '';
 
     if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), 'js-ajax-post-load-nonce' ) ) {

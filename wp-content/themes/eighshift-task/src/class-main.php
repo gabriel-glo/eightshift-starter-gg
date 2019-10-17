@@ -14,6 +14,7 @@ namespace Eighshift_Task\Core;
 use Eightshift_Libs\Core\Main as LibMain;
 
 use Eighshift_Task\Admin;
+use Eighshift_Task\Admin_Ajax;
 use Eighshift_Task\Manifest;
 use Eighshift_Task\General;
 use Eighshift_Task\Blocks;
@@ -53,7 +54,9 @@ class Main extends LibMain {
       Admin\Admin::class => [ Manifest\Manifest::class ],
       Admin\Login::class,
       Admin\Media::class,
-      Admin\Ajax_Post_Load::class,
+
+      // Admin AJAX.
+      Admin_Ajax\Ajax_Latest_Posts::class,
 
       // Menu.
       Menu\Menu::class,

@@ -23,12 +23,10 @@ export const Post = (props) => {
   ]);
 
   const headingClasses = classnames([
-    'heading__size--small',
     `${parentClass}__post-title`,
   ]);
 
   const excerptClasses = classnames([
-    'paragraph__size--default',
     `${parentClass}__post-excerpt`,
   ]);
 

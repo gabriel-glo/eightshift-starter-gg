@@ -30,12 +30,10 @@ $date_classes = "
 ";
 
 $heading_classes = "
-  heading__size--small
   {$parent_class}__post-title
 ";
 
 $excerpt_classes = "
-  paragraph__size--default
   {$parent_class}__post-excerpt
 ";
 

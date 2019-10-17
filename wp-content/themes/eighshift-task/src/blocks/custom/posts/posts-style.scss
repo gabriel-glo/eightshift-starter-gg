@@ -28,7 +28,7 @@ $block-posts: (
     }
   }
 
-  .btn-load-more {
+  &__load-more {
     display: block;
     margin: 0 auto;
   }
@@ -58,11 +58,15 @@ $block-posts: (
 
   &__post-title {
     @extend %heading-reset;
+    font-size: 22px;
+    line-height: 1;
     margin-bottom: 10px;
   }
 
   &__post-excerpt {
     @extend %paragraph-reset;
+    font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 20px;
   }
 

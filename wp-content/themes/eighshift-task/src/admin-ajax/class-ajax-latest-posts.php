@@ -19,6 +19,8 @@ use Eightshift_Libs\Core\Service;
  */
 class Ajax_Latest_Posts implements Service {
 
+  const AJAX_LATEST_POSTS_NONCE = 'js-ajax-post-load-nonce';
+
   /**
    * Register all the hooks
    *
@@ -42,13 +44,8 @@ class Ajax_Latest_Posts implements Service {
   public function latest_posts_callback() {
     $output = '';
 
-    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), 'js-ajax-post-load-nonce' ) ) {
-      wp_send_json_error(
-        [
-          'message' => 'Nonce verification error',
-        ],
-        400
-      );
+    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['nonce'] ), static::AJAX_LATEST_POSTS_NONCE ) ) {
+      wp_send_json_error( esc_html__( 'Nonce verification error', 'eightshift-task' ), 400 );
     }
 
     if ( ! empty( $_POST['page'] ) ) {
@@ -104,7 +101,15 @@ class Ajax_Latest_Posts implements Service {
 
       $output = ob_get_clean();
 
-      wp_send_json( [ 'posts' => $output ] );
+      wp_send_json(
+        [
+          'success' => true,
+          'posts' => $output,
+        ],
+        200
+      );
+    } else {
+      wp_send_json_error( esc_html__( 'No Posts found', 'eightshift-task' ), 400 );
     }
   }
 }

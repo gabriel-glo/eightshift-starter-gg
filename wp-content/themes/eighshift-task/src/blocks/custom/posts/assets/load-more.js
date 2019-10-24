@@ -1,11 +1,15 @@
-import '@babel/polyfill';
-
 export class LoadMore {
 
-  constructor(element) {
-    this.element = element;
-    this.loadMoreTrigger = this.element.parentNode.querySelector('.js-load-more');
-    this.nonce = this.element.parentNode.querySelector('#ajax-post-load-nonce');
+  constructor(options = {
+    element: document.querySelector('.js-block-posts'),
+    loadMoreElement: '.js-load-more',
+    nonce: '#ajax-post-load-nonce',
+    url: themeLocalization.ajaxurl,
+    action: 'latest_posts',
+  }) {
+    this.element = options.element;
+    this.loadMoreTrigger = this.element.parentNode.querySelector(options.loadMoreElement);
+    this.nonce = this.element.parentNode.querySelector(options.nonce);
 
     this.postNumber = parseInt(this.element.getAttribute('data-post-number'), 10);
 
@@ -14,9 +18,9 @@ export class LoadMore {
     this.maxPage = parseInt(this.loadMoreTrigger.getAttribute('data-max-pages'), 10);
     this.parentClass = this.loadMoreTrigger.getAttribute('data-parent-class');
 
-    this.adminAjaxUrl = themeLocalization.ajaxurl; // eslint-disable-line no-undef
+    this.url = options.url;
 
-    this.action = 'latest_posts';
+    this.action = options.action;
   }
 
   async loadPosts() {
@@ -30,31 +34,26 @@ export class LoadMore {
       parentClass: this.parentClass,
     };
 
-    await fetch(
-      this.adminAjaxUrl,
-      {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString(),
-      }
-    ).then((response) => {
+    await fetch(this.url, {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString(),
+    }).then((response) => response.json())
+      .then((response) => {
+        if (!response.success) {
+          throw Error(response.data);
+        }
 
-      if (!response.ok) {
-        throw Error('There was an error with the request');
-      }
+        this.page++;
+        if (this.page === this.maxPage) {
+          this.loadMoreTrigger.style.display = 'none';
+        }
+        this.element.insertAdjacentHTML('beforeend', response.posts);
 
-      this.page++;
-      if (this.page === this.maxPage) {
-        this.loadMoreTrigger.style.display = 'none';
-      }
-
-      return response.json();
-    }).then((postList) => {
-      this.element.insertAdjacentHTML('beforeend', postList.posts);
-    }).catch((error) => {
-      console.error(error);
-    });
+      }).catch((error) => {
+        console.error(error);
+      });
 
 
   }

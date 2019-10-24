@@ -40,28 +40,14 @@ export const Post = (props) => {
 
   return (
     <div className={postClasses}>
-      {
-        featuredImageThumb &&
-        <img src={featuredImageThumb[0]} alt="" className={imgClasses} />
-      }
-      {
-        date &&
-        <p className={dateClasses}>
-          {date}
-        </p>
-      }
-      {
-        title &&
-        <h4 className={headingClasses}>
-          {title}
-        </h4>
-      }
-      {
-        excerpt &&
-        <p className={excerptClasses}>
-          {excerpt}
-        </p>
-      }
+      {featuredImageThumb && <img src={featuredImageThumb[0]} alt="" className={imgClasses} />}
+
+      {date && <p className={dateClasses}>{date}</p>}
+
+      {title && <h4 className={headingClasses}>{title}</h4>}
+
+      {excerpt && <p className={excerptClasses}>{excerpt}</p>}
+
       {
         categories &&
         <div className={categoriesClasses}>

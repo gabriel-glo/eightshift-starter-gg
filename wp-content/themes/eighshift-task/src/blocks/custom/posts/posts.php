@@ -40,6 +40,8 @@ $listing_classes = "
     [
       'post_type' => 'post',
       'posts_per_page' => $post_number,
+      'update_post_meta_cache' => false,
+      'update_post_term_cache' => false,
     ]
   );
 

@@ -1,0 +1,32 @@
+name: Build / Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Install dependencies and build assets
+      run: |
+        
+        echo " ===== Installing dependencies ===== "
+        npm install
+        composer install --no-dev --no-scripts
+        
+        echo " ===== Building assets ===== "
+        npm run build
+        
+        echo " ===== Folder structure after build ===== "
+        ls -al
+      env:
+        CI: true

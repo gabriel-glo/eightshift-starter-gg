@@ -14,15 +14,12 @@ jobs:
     - uses: actions/checkout@master
     - name: Install dependencies and build assets
       run: |
-        echo " ===== Folder structure before build ===== "
-        ls -al
         
         echo " ===== Installing dependencies ===== "
         npm install
         composer install --no-dev --no-scripts
         
         echo " ===== Building assets ===== "
-        # npm rebuild node-sass
         npm run build
         
         echo " ===== Folder structure after build ===== "

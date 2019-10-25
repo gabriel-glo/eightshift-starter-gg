@@ -19,6 +19,11 @@ use Eightshift_Libs\Core\Service;
  */
 class Ajax_Latest_Posts implements Service {
 
+  /**
+   * Name of nonce for AJAX loading of posts
+   *
+   * @var string
+   */
   const AJAX_LATEST_POSTS_NONCE = 'js-ajax-post-load-nonce';
 
   /**

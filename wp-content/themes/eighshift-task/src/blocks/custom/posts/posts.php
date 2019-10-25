@@ -8,6 +8,8 @@
 
 namespace Eighshift_Task\Blocks;
 
+use Eighshift_Task\Admin_Ajax\Ajax_Latest_Posts;
+
 $block_class    = $attributes['blockClass'] ?? '';
 $block_js_class = $attributes['blockJsClass'] ?? '';
 $post_number    = $attributes['postNumber'] ?? 4;
@@ -88,7 +90,7 @@ $listing_classes = "
       ]
     );
 
-    wp_nonce_field( 'js-ajax-post-load-nonce', 'ajax-post-load-nonce' );
+    wp_nonce_field( Ajax_Latest_Posts::AJAX_LATEST_POSTS_NONCE, 'ajax-post-load-nonce' );
     ?>
   </div>
 </div>

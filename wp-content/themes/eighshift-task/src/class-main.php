@@ -14,11 +14,13 @@ namespace Eighshift_Task\Core;
 use Eightshift_Libs\Core\Main as LibMain;
 
 use Eighshift_Task\Admin;
+use Eighshift_Task\Admin_Ajax;
 use Eighshift_Task\Manifest;
 use Eighshift_Task\General;
 use Eighshift_Task\Blocks;
 use Eighshift_Task\Admin\Menu;
 use Eighshift_Task\Theme;
+use Eighshift_Task\Rest;
 
 /**
  * The main start class.
@@ -53,6 +55,9 @@ class Main extends LibMain {
       Admin\Login::class,
       Admin\Media::class,
 
+      // Admin AJAX.
+      Admin_Ajax\Ajax_Latest_Posts::class,
+
       // Menu.
       Menu\Menu::class,
 
@@ -62,6 +67,11 @@ class Main extends LibMain {
 
       // Theme.
       Theme\Theme::class => [ Manifest\Manifest::class ],
+
+      // REST.
+      Rest\Fields\Post_Featured_Image_Field::class,
+      Rest\Fields\Post_Date_Field::class,
+      Rest\Fields\Post_Categories_Field::class,
     ];
   }
 }

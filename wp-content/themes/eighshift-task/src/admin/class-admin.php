@@ -53,6 +53,7 @@ class Admin implements Service {
     add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_styles' ], 50 );
     add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
     add_filter( 'get_user_option_admin_color', [ $this, 'set_admin_color_based_on_env' ], 50 );
+    remove_filter( 'the_excerpt', 'wpautop' );
   }
 
   /**

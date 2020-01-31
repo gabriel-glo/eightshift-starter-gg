@@ -23,6 +23,11 @@ $btn: (
   ),
   sizes: (
     mobile: (
+      small: (
+        font-size: 16px,
+        line-height: 1,
+        height: 50px,
+      ),
       default: (
         font-size: 16px,
         line-height: 1.4,

@@ -25,7 +25,7 @@ jobs:
       run: npm install
       
     # Install composer packages
-    - name: Install NPM packages
+    - name: Install composer packages
       run:   composer install --no-dev --no-scripts
       
     # Build assets

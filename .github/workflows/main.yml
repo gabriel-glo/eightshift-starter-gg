@@ -30,7 +30,7 @@ jobs:
       
     # Build assets
     - name: Build assets
-      run: npm run dev
+      run: npm run build
       
     # List all files
     - name: List all files

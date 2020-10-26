@@ -18,11 +18,3 @@ Before you start developing ask a lead developer to export you the latest versio
   ```
   https://staging.boilerplate.com/
   ```
-
-## Production server
-  * `master` branch
-  * Create pull request from `feature` branch to `master` when it is production ready
-  * **NO OVERRIDING THE DATABASE**
-  ```
-  https://boilerplate.com/
-  ```

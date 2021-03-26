@@ -10,3 +10,11 @@ Before you start developing ask a lead developer to export you the latest versio
   ```
   http://dev.boilerplate.com/
   ```
+
+## Staging server
+  * `staging` branch
+  * QA testing and client tests and approvals
+  * Never merge `staging` to `master` branch.
+  ```
+  https://staging.boilerplate.com/
+  ```
